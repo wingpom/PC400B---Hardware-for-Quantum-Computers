@@ -9,3 +9,4 @@ In consideration (to be uploaded):
 - Final project
 - Assignment #1
 - Assignment #2
+- Assignment #3

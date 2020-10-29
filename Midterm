@@ -1,0 +1,209 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{physics}
+\usepackage{hyperref}
+
+
+\title{PC400 Midterm}
+\author{Quynh Dao}
+\date{October 28, 2020}
+
+\begin{document}
+
+\maketitle
+
+\section{}
+Let H be a Hermitian matrix. Show that
+$U = (I+iH)(I-iH)^-^1$
+\newline
+is unitary.
+\newline
+\newline
+Let H = $\sigma_{x} = 
+\begin{bmatrix}
+0 & 1 \\
+1 & 0
+\end{bmatrix}$
+\newline
+Note: $\sigma_{x}$ is a pauli matrix and Hermitian.
+\newline
+$$
+U =
+\left(
+\begin{bmatrix}
+1 & 0 \\
+0 & 1
+\end{bmatrix}+i
+\begin{bmatrix}
+0 & 1 \\
+1 & 0
+\end{bmatrix}
+\right)
+\left(
+\begin{bmatrix}
+1 & 0 \\
+0 & 1
+\end{bmatrix}-i
+\begin{bmatrix}
+0 & 1 \\
+1 & 0
+\end{bmatrix}
+\right)^{-1}
+$$
+\newline
+$$
+=
+\left(
+\begin{bmatrix}
+1 & 0 \\
+0 & 1
+\end{bmatrix}+
+\begin{bmatrix}
+0 & i \\
+i & 0
+\end{bmatrix}
+\right)
+\left(
+\begin{bmatrix}
+1 & 0 \\
+0 & 1
+\end{bmatrix}-
+\begin{bmatrix}
+0 & i \\
+i & 0
+\end{bmatrix}
+\right)^{-1}
+$$
+\newline
+$$
+=
+\left(
+\begin{bmatrix}
+1 & i \\
+i & 1
+\end{bmatrix}
+\right)
+\left(
+\begin{bmatrix}
+1 & -i \\
+-i & 1
+\end{bmatrix}
+\right)^{-1}
+$$
+\newline
+$$
+=
+\begin{bmatrix}
+1 & i \\
+i & 1
+\end{bmatrix}
+\begin{bmatrix}
+\frac{1}{2} & \frac{i}{2} \\
+\frac{i}{2} & \frac{1}{2}
+\end{bmatrix}
+$$
+\newline
+$$ =
+\begin{bmatrix}
+0 & i \\
+i & 0
+\end{bmatrix}
+$$
+If $U^TU = I$ then U is Unitary.
+$$
+U^T =
+\begin{bmatrix}
+0 & -i \\
+-i & 0
+\end{bmatrix}
+$$
+\newline
+$$
+U^TU =
+\begin{bmatrix}
+0 & i \\
+i & 0
+\end{bmatrix}
+\begin{bmatrix}
+0 & -i \\
+-i & 0
+\end{bmatrix}
+= 
+\begin{bmatrix}
+1 & 0 \\
+0 & 1
+\end{bmatrix}
+= I
+$$
+Therefore $U = (I+iH)(I-iH)^-^1$ is unitary.
+
+\section{}
+Let $\ket{a},\ket{b},\ket{c},\ket{d} \in C^n$. Show that $(\ket{a}\bra{b})\otimes(\ket{c}\bra{d}) = $
+$(\ket{a}\otimes\bra{c})(\ket{b}\otimes\bra{d}) = \ket{ac}\bra{bd}.$
+\newline
+\newline
+I don't know the answer to this.
+\section{}
+Explain what are the limitations facing quantum computers and how researchers are
+trying to solve them.
+\newline
+
+One of the limitations faced by quantum computers is errors in the form of noise. Where these noises are caused by vibrations, temperature fluctuations, EM waves and other external factors outside the environment. 
+One way, researchers are trying to solve the noise problem, is using a hybrid approach to quantum computing (a mixture of classical and quantum computing), where researchers are running the most critical sections of a program on a quantum computer and most of the robust and bulk program is ran by a classical computer 
+Taken taken from: 
+\url{https://blogs.scientificamerican.com/observations/the-problem-with-quantum-computers}
+
+\section{}
+Compute the norm of the following vectors
+$$
+\ket{u} = 
+\begin{pmatrix}
+2 \\
+4i 
+\end{pmatrix}
+,
+\ket{v} = 
+\begin{pmatrix}
+-1 \\
+3i \\
+i
+\end{pmatrix}
+$$
+$$ ||\overrightarrow{u}|| = \sqrt{2^2+(4i)^2}
+=\sqrt{4+16i^2}
+=\sqrt{-12}
+=2\sqrt{3}i
+$$
+$$ ||\overrightarrow{v}|| = \sqrt{(-1)^2+(3i)^2+i^2}
+=\sqrt{(1+9i^2+i^2)}
+=\sqrt{-9}
+=\sqrt{3}i
+$$
+
+\section{}
+Suppose ${\ket{u_1}, \ket{u_2}, \ket{u_3}}$ is an orthonormal basis for a three-dimensional Hilbert space. A system is in the state
+$$\ket{\psi} = \frac{1}{\sqrt{5}}\ket{u_1} - i\sqrt{\frac{7}{15}}\ket{u_2} + \frac{1}{\sqrt{3}}\ket{u_3}
+$$
+(a) Is this state normalized?
+Yes, the system is normalized (All probabilities = 1)
+$$
+P = \left|\left(\frac{1}{\sqrt{5}}\right)^2\right| +\left|\left(i\sqrt{\frac{7}{15}}\right)^2\right| +\left|\frac{1}{\sqrt{3}}^2\right|
+$$
+$$
+= \left|\frac{1}{5}\right| + \left|-\frac{7}{15}\right| + \left|\frac{1}{3}\right|
+= \frac{3}{15} + \frac{7}{15} + \frac{5}{15}
+=\frac{15}{15} 
+= 1
+$$
+(b) If a measurement is made, find the probability of finding the system in each of the states
+${\ket{u_1}, \ket{u_2}, \ket{u_3}}$.
+\newline
+From part a, probability of finding $\ket{u_1} = \frac{3}{15} = 20\%$, $\ket{u_2} = \frac{7}{15} = 46.\overline6\%, and \ket{u_3} = \frac{5}{15} = 33.\overline3\%$
+\section{}
+Explain the concept of Hilbert space and role it plays in the theory of quantum computers.
+\newline
+\newline
+Hilbert space is mathematical concept that extends Euclidean space to d-dimensional complex linear, meaning that every linear combination of states is a state too (norm, scalar product, etc are defined too). The role of Hilbert space in the theory of quantum computers, allows the interactions of qubits to be interpreted. For example, Hilbert space provides a linear space which allows for the principle of superposition that explains interference phenomena.
+
+\end{document}

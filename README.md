@@ -5,8 +5,5 @@ Hi! These are my answers to the PC400B Midterm typed in LaTeX. The initative for
 Incomplete Material:
 - Question 2
 
-In consideration (to be uploaded):
-- Final project
-- Assignment #1
-- Assignment #2
-- Assignment #3
+Errors:
+- Question 4, the answer to norm of vector v, is 3i

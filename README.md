@@ -4,3 +4,8 @@ Hi! These are my answers to the PC400B Midterm typed in LaTeX. The initative for
 
 Incomplete Material:
 - Question 2
+
+In consideration (to be uploaded):
+- Final project
+- Assignment #1
+- Assignment #2
